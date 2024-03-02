@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Button, Form, Row, Col } from 'react-bootstrap';
 import axios from 'axios';
 
-const NuevoEmpleadoForm = ({ onEmpleadoAgregado, onHide }) => { // Añade la prop onHide
+const NuevoEmpleadoForm = ({ onEmpleadoAgregado, onHide }) => { 
   const [identidad, setIdentidad] = useState('');
   const [nombre, setNombre] = useState('');
 
@@ -24,13 +24,13 @@ const NuevoEmpleadoForm = ({ onEmpleadoAgregado, onHide }) => { // Añade la pro
         nombre,
       });
       console.log('Empleado agregado exitosamente');
-      onEmpleadoAgregado(); // Llama a la función onEmpleadoAgregado para mostrar la alerta
-      setIdentidad(''); // Limpia los campos después de agregar el empleado
+      onEmpleadoAgregado(); 
+      setIdentidad(''); 
       setNombre('');
-      onHide(); // Cierra el modal después de agregar el empleado
+      onHide(); 
     } catch (error) {
       console.error('Error al agregar empleado:', error);
-      // Aquí puedes manejar el error de acuerdo a tus necesidades
+     
     }
   };
 
