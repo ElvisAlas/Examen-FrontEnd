@@ -1,4 +1,4 @@
-en addm. empleados esta el crud de la taba
+en adm. empleados esta el crud de la tabla (tbl_RRHH)
 
 * en el boton de nuevo empleado se puede adicionar los empleados
 
@@ -7,5 +7,5 @@ en addm. empleados esta el crud de la taba
 el boton de eliminar registro , elimina el registro de la tabla.
 
 
-el backen es el mismo que se utilizo en el examen  
+el backend es el mismo que se utilizo en el examen  
     https://github.com/ElvisAlas/Examen_1_P
