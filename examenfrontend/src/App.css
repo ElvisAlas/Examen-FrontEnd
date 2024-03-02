@@ -48,6 +48,15 @@ nav a {
   display: block;
 }
 
+Dorpdown {
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  font-size: 1.1rem;
+  padding: 10px;
+  display: block;
+}
+
 ul li a:hover{
   background: #ff5722;
 }
@@ -174,4 +183,29 @@ footer {
 }
 
 
+/* .menu {
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  font-size: 1.1rem;
+  padding: 10px;
+  display: block;
+}
+
+.menu li {
+  background: #ff5722;
+}
+
+.menu li:last-child {
+  margin-right: 0;
+}
+
+.menu a {
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  font-size: 1.1rem;
+  padding: 10px;
+  display: block;
+} */
 

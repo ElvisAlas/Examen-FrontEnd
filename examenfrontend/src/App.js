@@ -1,49 +1,54 @@
-import { FaFacebookF, FaInstagram, FaLinkedin, FaTwitter, FaYoutube } from 'react-icons/fa';
 import React, { useState } from 'react';
 import './App.css';
-
-
-let vacio = '';
+import ConsultaEliminacionEmpleado from './ConsultaEliminacionEmpleado';
+import { FaFacebookF, FaInstagram, FaLinkedin, FaTwitter } from 'react-icons/fa';
+import { Modal, Button, Form } from 'react-bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   const [isHovered, setIsHovered] = useState(false);
-  const abrir_cerrar_menu = () => {
+  const [showConsultaEliminacion, setShowConsultaEliminacion] = useState(false);
 
-    let menu_desplegable = document.getElementById('menu');
-    let boton_cerrar = document.getElementById('x');
-    menu_desplegable.classList.toggle('abrir_menu');
-    boton_cerrar.classList.toggle('colocar_x');
+  const abrirCerrarMenu = () => {
+    setIsHovered(!isHovered);
+    if (!showConsultaEliminacion) {
+      setShowConsultaEliminacion(true);
+    }
+  };
 
-  }
   return (
     <>
       <div className='container'>
 
         <header>
           <div className='barras'>
-            <button onClick={abrir_cerrar_menu} className='boton_menu' id='x'></button>
+            <button onClick={abrirCerrarMenu} className='boton_menu' id='x'></button>
           </div>
 
           <nav id='menu' className='desplegable'>
             <ul>
               <li>
-                <a href={vacio}>Ingreso Personal</a>
+                <a href='#' onClick={abrirCerrarMenu}>Adm. Empleados</a>
               </li>
               <li>
-                <a href={vacio}>Vacaciones</a>
+                <a href='#'>Vacaciones</a>
               </li>
               <li>
-                <a href={vacio}>Permisos</a>
+                <a href='#'>Permisos</a>
               </li>
               <li>
-                <a href={vacio}>Incidentes</a>
+                <a href='#'>Incidentes</a>
               </li>
               <li>
-                <a href={vacio}>Contactanos</a>
+                <a href='#'>Contactanos</a>
               </li>
             </ul>
           </nav>
         </header>
+
+        <main>
+          {showConsultaEliminacion && <ConsultaEliminacionEmpleado />}
+        </main>
 
         <footer>
           <div className="redes-sociales">
@@ -59,9 +64,9 @@ function App() {
             <a href="#" className={isHovered ? 'icono-red-social hovered' : 'icono-red-social'} onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}>
               <FaLinkedin />
             </a>
-           
           </div>
         </footer>
+
       </div>
     </>
   );
